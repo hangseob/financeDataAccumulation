@@ -19,19 +19,24 @@ def create_sample_table():
         # 1. DB 접속 (Wallet 사용)
         print(f"Connecting to Oracle Cloud DB as {config['user']} using Wallet...")
         
-        # oracledb.init_oracle_client() 가 필요할 수 있으나, 
-        # 최근 버전의 oracledb는 thin 모드에서도 지갑 연동을 지원합니다.
-        # 지갑 경로가 올바른지 확인
-        if not os.path.exists(wallet_path):
-            print(f"❌ Error: Wallet path not found at {wallet_path}")
-            return
+        # 지갑 경로 유효성 검사 및 보정
+        current_wallet_path = wallet_path
+        if not os.path.exists(current_wallet_path):
+            # 현재 폴더 내 wallet 폴더가 있는지 확인 (PowerShell/CMD 상대 경로 대비)
+            alt_path = os.path.join(os.getcwd(), 'wallet')
+            if os.path.exists(alt_path):
+                current_wallet_path = alt_path
+                print(f"ℹ️ Wallet path adjusted to: {current_wallet_path}")
+            else:
+                print(f"❌ Error: Wallet path not found at {current_wallet_path}")
+                return
 
         conn = oracledb.connect(
             user=config["user"],
             password=config["password"],
             dsn=config["dsn"],
-            config_dir=wallet_path,
-            wallet_location=wallet_path,
+            config_dir=current_wallet_path,
+            wallet_location=current_wallet_path,
             wallet_password=wallet_password
         )
         cursor = conn.cursor()

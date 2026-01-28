@@ -8,7 +8,7 @@ import sys
 ORACLE_CONFIG = {
     "user": "ADMIN",
     "password": "1stOracleDB.pw",
-    "dsn": "s9lbmrnw3zct3j80_high",
+    "dsn": "S9LBMRNW3ZCT3J80_high",
     "wallet_path": r'C:\oracle\Wallet',
     "wallet_password": '0458seob.wallet'
 }
@@ -16,7 +16,15 @@ ORACLE_CONFIG = {
 def get_connection():
     """Oracle DB 연결 객체를 반환합니다."""
     # 리눅스 환경 등에서 경로가 다를 경우를 대비해 환경변수 확인
-    wallet_path = os.environ.get("ORACLE_WALLET_PATH", ORACLE_CONFIG["wallet_path"])
+    # 1. 환경변수 확인 2. 현재 작업 디렉토리 내 wallet 폴더 확인 3. 기본 설정값 확인
+    workspace_wallet = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'wallet')
+    wallet_path = os.environ.get("ORACLE_WALLET_PATH")
+    
+    if not wallet_path:
+        if os.path.exists(workspace_wallet):
+            wallet_path = workspace_wallet
+        else:
+            wallet_path = ORACLE_CONFIG["wallet_path"]
     
     try:
         conn = oracledb.connect(
@@ -64,6 +72,7 @@ def get_all_curve_data(curve_id, start_date, end_date):
     if not conn: return pd.DataFrame()
     
     try:
+        cursor = conn.cursor()
         sql = """
             SELECT TDATE, TENOR_NAME, MID, BID, ASK, CCY, RATE_TYPE
             FROM SPT.MMKT_RATE
@@ -72,7 +81,10 @@ def get_all_curve_data(curve_id, start_date, end_date):
               AND TDATE <= :3
             ORDER BY TDATE, TENOR_NAME
         """
-        df = pd.read_sql(sql, conn, params=[curve_id, start_date, end_date])
+        cursor.execute(sql, [curve_id, start_date, end_date])
+        columns = [col[0] for col in cursor.description]
+        data = cursor.fetchall()
+        df = pd.DataFrame(data, columns=columns)
         return df
     finally:
         conn.close()

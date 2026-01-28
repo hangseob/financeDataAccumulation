@@ -113,6 +113,10 @@ st.title("📈 Real-time Interest Rate Curve Viewer")
 # 1. 사이드바 설정 (키를 부여하여 안정화)
 st.sidebar.header("Data Selection")
 available_curves = cached_available_curves()
+if not available_curves:
+    st.error("데이터베이스에서 커브 목록을 가져올 수 없습니다. DB 연결 및 테이블(SPT.MMKT_RATE)을 확인해 주세요.")
+    st.stop()
+    
 curve_id = st.sidebar.selectbox("Select Curve ID", options=available_curves, index=available_curves.index("KRWQ3L") if "KRWQ3L" in available_curves else 0, key="curve_selector")
 
 all_dates = cached_available_dates(curve_id)
