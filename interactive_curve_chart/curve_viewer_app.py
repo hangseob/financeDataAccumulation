@@ -7,12 +7,19 @@ import os
 import streamlit.components.v1 as components
 import time
 import random
+import traceback
 
 # 프로젝트 루트를 path에 추가하여 basic_library 임포트 가능하게 함
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from basic_library.oracle_db import get_available_curves, get_all_curve_data, get_available_dates
-from basic_library.tenor_conventions import tenor_name_to_year_fraction
+try:
+    from basic_library.oracle_db import get_available_curves, get_all_curve_data, get_available_dates
+    from basic_library.tenor_conventions import tenor_name_to_year_fraction
+except Exception as e:
+    st.error(f"Import Error: {e}")
+    print(f"Import Error: {e}")
+    traceback.print_exc()
+    st.stop()
 
 # 페이지 설정
 st.set_page_config(page_title="Interest Rate Curve Viewer", layout="wide")
@@ -36,29 +43,88 @@ def log_feedback(message):
     except (PermissionError, Exception):
         pass
 
-# --- 초정밀 스크롤 보존 ---
+# --- 초정밀 스크롤 보존 (강화된 requestAnimationFrame) ---
 def preserve_scroll(rid):
     components.html(
         f"""
         <script>
-        const mainContent = window.parent.document.querySelector('section.main');
-        if (mainContent) {{
-            const targetPos = window.parent.sessionStorage.getItem('streamlit_scroll_pos');
-            if (targetPos) {{
-                const pos = parseInt(targetPos);
-                mainContent.scrollTo(0, pos);
-                let start = null;
-                const forceScroll = (timestamp) => {{
-                    if (!start) start = timestamp;
-                    mainContent.scrollTo(0, pos);
-                    if (timestamp - start < 500) window.requestAnimationFrame(forceScroll);
+        (function() {{
+            const parentDoc = window.parent.document;
+            const parentWin = window.parent;
+            
+            const getScrollEl = () => parentDoc.querySelector('section[data-testid="stMain"]') || parentDoc.querySelector('section.main');
+            
+            const getSavedPos = () => parseInt(parentWin.sessionStorage.getItem('st_scroll_y') || '0');
+            
+            // 스크롤 복구 (여러 프레임에 걸쳐 반복 시도)
+            const restoreScroll = (attempts = 5) => {{
+                const savedPos = getSavedPos();
+                if (savedPos <= 0) return;
+                
+                const doRestore = (remaining) => {{
+                    if (remaining <= 0) return;
+                    parentWin.requestAnimationFrame(() => {{
+                        const el = getScrollEl();
+                        if (el && el.scrollTop < savedPos - 20) {{
+                            el.scrollTop = savedPos;
+                            // 다음 프레임에서 다시 확인/시도
+                            setTimeout(() => doRestore(remaining - 1), 16);
+                        }}
+                    }});
                 }};
-                window.requestAnimationFrame(forceScroll);
+                
+                doRestore(attempts);
+            }};
+            
+            // 스크롤 저장 (자연스러운 스크롤만)
+            const saveScroll = () => {{
+                const el = getScrollEl();
+                if (el && el.scrollTop > 0) {{
+                    const currentSaved = getSavedPos();
+                    if (Math.abs(el.scrollTop - currentSaved) < 500 || currentSaved === 0) {{
+                        parentWin.sessionStorage.setItem('st_scroll_y', el.scrollTop);
+                    }}
+                }}
+            }};
+            
+            // 스크롤 리스너 등록
+            const attachListener = () => {{
+                const el = getScrollEl();
+                if (el && !el.dataset.scrollListenerAttached) {{
+                    el.addEventListener('scroll', saveScroll, {{ passive: true }});
+                    el.dataset.scrollListenerAttached = 'true';
+                }}
+            }};
+            
+            // 즉시 복구 시도
+            attachListener();
+            restoreScroll(10);
+            
+            // 영구적 interval (50ms 주기)
+            if (!parentWin.__scrollInterval) {{
+                parentWin.__scrollInterval = setInterval(() => {{
+                    attachListener();
+                    const el = getScrollEl();
+                    const savedPos = getSavedPos();
+                    // 스크롤이 튀었으면 복구
+                    if (el && savedPos > 0 && el.scrollTop < savedPos - 20) {{
+                        restoreScroll(5);
+                    }}
+                }}, 50);
             }}
-            mainContent.addEventListener('scroll', () => {{
-                window.parent.sessionStorage.setItem('streamlit_scroll_pos', mainContent.scrollTop);
-            }}, {{ passive: true }});
-        }}
+            
+            // MutationObserver
+            if (!parentWin.__scrollPreserverActive) {{
+                parentWin.__scrollPreserverActive = true;
+                
+                const observer = new MutationObserver(() => {{
+                    attachListener();
+                    restoreScroll(10);
+                }});
+                
+                observer.observe(parentDoc.body, {{ childList: true, subtree: true }});
+            }}
+        }})();
         </script>
         <div style="display:none" id="scroll-trigger-{rid}"></div>
         """,
@@ -76,6 +142,8 @@ def cached_available_dates(curve_id): return get_available_dates(curve_id)
 def cached_curve_data(curve_id, start_date, end_date):
     df = get_all_curve_data(curve_id, start_date, end_date)
     if not df.empty:
+        # 데이터 정제: MID 값이 None인 경우 0으로 처리하거나 제외
+        df['MID'] = pd.to_numeric(df['MID'], errors='coerce').fillna(0.0)
         df['MID'] = df['MID'] * 100.0
         df['year_fraction'] = df['TENOR_NAME'].apply(tenor_name_to_year_fraction)
         df = df.sort_values(['TDATE', 'year_fraction']).reset_index(drop=True)
@@ -110,13 +178,29 @@ def get_collapsed_df(df, threshold, enabled):
 
 st.title("📈 Real-time Interest Rate Curve Viewer")
 
+# --- 전역 스크롤 보존 (최상단 배치) ---
+rid_global = random.randint(0, 1000000)
+preserve_scroll(rid_global)
+
 # 1. 사이드바 설정 (키를 부여하여 안정화)
 st.sidebar.header("Data Selection")
 available_curves = cached_available_curves()
-curve_id = st.sidebar.selectbox("Select Curve ID", options=available_curves, index=available_curves.index("KRWQ3L") if "KRWQ3L" in available_curves else 0, key="curve_selector")
+
+if not available_curves:
+    st.error("❌ 사용 가능한 커브 데이터가 없습니다. DB 연결을 확인해 주세요.")
+    st.stop()
+
+curve_id = st.sidebar.selectbox(
+    "Select Curve ID", 
+    options=available_curves, 
+    index=available_curves.index("KRWQ3L") if "KRWQ3L" in available_curves else 0, 
+    key="curve_selector"
+)
 
 all_dates = cached_available_dates(curve_id)
-if not all_dates: st.stop()
+if not all_dates:
+    st.warning(f"⚠️ '{curve_id}' 커브에 대한 날짜 데이터가 없습니다.")
+    st.stop()
 
 st.sidebar.subheader("Data Period")
 min_date_val = datetime.strptime(all_dates[0], "%Y%m%d")
@@ -182,9 +266,6 @@ def sync_from_input():
 # --- 메인 프래그먼트 ---
 @st.fragment
 def render_chart_and_controls(current_full_df):
-    rid = random.randint(0, 1000000)
-    preserve_scroll(rid)
-    
     dates = sorted(current_full_df['TDATE'].unique().tolist())
     # 현재 선택된 날짜가 리스트에 없으면 보정
     if st.session_state.selected_date not in dates:
@@ -200,7 +281,7 @@ def render_chart_and_controls(current_full_df):
     with c2: threshold = st.number_input("Threshold", 1, 30, 5, disabled=not collapse_on, label_visibility="collapsed")
     with c3: y_min_val = st.number_input("Y-Min (%)", value=None, format="%.2f", placeholder="Y-Min (%)", label_visibility="collapsed")
     with c4:
-        if st.button("⚡ Cache for Anim", use_container_width=True, type="primary" if not st.session_state.is_cached else "secondary"):
+        if st.button("⚡ Cache for Anim", width='stretch', type="primary" if not st.session_state.is_cached else "secondary"):
             st.session_state.is_cached = True
             st.rerun()
 
@@ -211,7 +292,19 @@ def render_chart_and_controls(current_full_df):
 
     with st.container():
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x=df_current['plot_x'], y=df_current['MID'], mode='lines+markers', text=df_current['TENOR_NAME'], hovertemplate='Tenor: %{text}<br>MID: %{y:.4f}%<extra></extra>', line=dict(color='red', width=3), marker=dict(size=8, color='red'), name="Yield Curve"))
+        fig.add_trace(go.Scatter(
+            x=df_current['plot_x'], 
+            y=df_current['MID'], 
+            mode='lines+markers', 
+            text=df_current['TENOR_NAME'], 
+            hovertemplate='Tenor: %{text}<br>MID: %{y:.4f}%<extra></extra>', 
+            line=dict(color='red', width=3), 
+            marker=dict(size=8, color='red'), 
+            name="Yield Curve"
+        ))
+
+        # X축 틱 설정을 위해 유니크한 테너 정보 추출 (정렬됨)
+        unique_tenors = processed_df[['plot_x', 'TENOR_NAME', 'year_fraction']].drop_duplicates().sort_values('year_fraction')
 
         if st.session_state.is_cached:
             fig.frames = get_plotly_frames(processed_df, tuple(dates), curve_id)
@@ -233,8 +326,21 @@ def render_chart_and_controls(current_full_df):
             fig.update_layout(title_text=f"Curve: {curve_id}")
             st.info(f"💡 '지연 렌더링' 모드 (날짜: {current_date})")
 
-        fig.update_layout(xaxis=dict(title="Tenor", tickmode='array', tickvals=processed_df['plot_x'].unique(), ticktext=processed_df['TENOR_NAME'].unique(), gridcolor='lightgrey'), yaxis=dict(title="MID Value (%)", range=[y_min, y_max], gridcolor='lightgrey'), height=700, margin=dict(l=50, r=50, t=80, b=(180 if st.session_state.is_cached else 80)), template="plotly_white", hovermode='x unified')
-        st.plotly_chart(fig, use_container_width=True, key=f"main_chart_{curve_id}_{st.session_state.is_cached}")
+        fig.update_layout(
+            xaxis=dict(
+                title="Tenor", 
+                tickmode='array', 
+                tickvals=unique_tenors['plot_x'], 
+                ticktext=unique_tenors['TENOR_NAME'], 
+                gridcolor='lightgrey'
+            ), 
+            yaxis=dict(title="MID Value (%)", range=[y_min, y_max], gridcolor='lightgrey'), 
+            height=700, 
+            margin=dict(l=50, r=50, t=80, b=(180 if st.session_state.is_cached else 80)), 
+            template="plotly_white", 
+            hovermode='x unified'
+        )
+        st.plotly_chart(fig, width='stretch', key=f"main_chart_{curve_id}_{st.session_state.is_cached}")
 
         sc1, sc2 = st.columns([8, 2])
         with sc1:
@@ -250,7 +356,7 @@ def render_chart_and_controls(current_full_df):
                 )
                 if selected_val != st.session_state.selected_date:
                     st.session_state.selected_date = selected_val
-                    st.rerun()
+                    # st.rerun() # fragment 내부에서는 위젯 변경 시 자동 리렌더링되므로 제거
         with sc2:
             if st.session_state.is_cached:
                 st.text_input("Go to Date", value="", placeholder="Disable in Cache Mode", key="goto_date_input_disabled", disabled=True)
@@ -258,7 +364,7 @@ def render_chart_and_controls(current_full_df):
                 st.text_input("Go to Date", value=st.session_state.selected_date, key="goto_date_input", on_change=sync_from_input)
             if st.session_state.date_info_msg: st.caption(st.session_state.date_info_msg)
         
-        st.markdown(f"<style>div[data-testid='stVerticalBlock']:has(> div #scroll-trigger-{rid}) {{ min-height: 850px; }}</style>", unsafe_allow_html=True)
+        st.markdown(f"<style>div[data-testid='stVerticalBlock']:has(> div #scroll-trigger-{rid_global}) {{ min-height: 850px; }}</style>", unsafe_allow_html=True)
 
 st.write("---")
 render_chart_and_controls(full_df)
