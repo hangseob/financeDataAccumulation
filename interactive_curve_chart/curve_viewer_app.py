@@ -130,14 +130,21 @@ start_str = anim_start_date.strftime("%Y%m%d")
 end_str = anim_end_date.strftime("%Y%m%d")
 
 # --- 세션 상태 관리 (날짜 기반으로 변경) ---
-if 'selected_date' not in st.session_state: st.session_state.selected_date = all_dates[0]
+# 초기화 시점 로깅
+if 'selected_date' not in st.session_state:
+    st.session_state.selected_date = start_str
+    log_feedback(f"Initial selected_date set to: {st.session_state.selected_date}")
+
 if 'is_cached' not in st.session_state: st.session_state.is_cached = False
 if 'date_info_msg' not in st.session_state: st.session_state.date_info_msg = ""
+
 current_config = (curve_id, start_str, end_str)
-if 'last_config' not in st.session_state: st.session_state.last_config = current_config
+if 'last_config' not in st.session_state:
+    st.session_state.last_config = current_config
 
 # 설정 변경 감지 시
 if st.session_state.last_config != current_config:
+    log_feedback(f"Config Change! Old: {st.session_state.last_config}, New: {current_config}")
     st.session_state.selected_date = start_str
     st.session_state.is_cached = False
     st.session_state.date_info_msg = ""
