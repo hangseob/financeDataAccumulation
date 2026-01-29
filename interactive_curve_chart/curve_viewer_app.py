@@ -38,9 +38,10 @@ def log_feedback(message):
     log_msg = f"[{timestamp}] {message}"
     print(log_msg)
     try:
-        with open("streamlit_log.txt", "a", encoding="utf-8") as f:
+        # 권한 문제가 없는 파일로 변경
+        with open("debug_log_ai.txt", "a", encoding="utf-8") as f:
             f.write(log_msg + "\n")
-    except (PermissionError, Exception):
+    except Exception:
         pass
 
 # --- 초정밀 스크롤 보존 (강화된 requestAnimationFrame) ---
@@ -190,31 +191,42 @@ if not available_curves:
     st.error("❌ 사용 가능한 커브 데이터가 없습니다. DB 연결을 확인해 주세요.")
     st.stop()
 
-curve_id = st.sidebar.selectbox(
+# 세션 상태 초기화 (최초 1회)
+if "curve_selector" not in st.session_state:
+    st.session_state.curve_selector = "KRWQ3L" if "KRWQ3L" in available_curves else available_curves[0]
+
+# 사이드바 위젯 - key를 사용하여 session_state와 직접 연결
+st.sidebar.selectbox(
     "Select Curve ID", 
     options=available_curves, 
-    index=available_curves.index("KRWQ3L") if "KRWQ3L" in available_curves else 0, 
     key="curve_selector"
 )
 
+curve_id = st.session_state.curve_selector
 all_dates = cached_available_dates(curve_id)
+
 if not all_dates:
     st.warning(f"⚠️ '{curve_id}' 커브에 대한 날짜 데이터가 없습니다.")
     st.stop()
 
 st.sidebar.subheader("Data Period")
-min_date_val = datetime.strptime(all_dates[0], "%Y%m%d")
-max_date_val = datetime.strptime(all_dates[-1], "%Y%m%d")
+abs_min_date = datetime.strptime(all_dates[0], "%Y%m%d")
+abs_max_date = datetime.strptime(all_dates[-1], "%Y%m%d")
+
+if "period_start" not in st.session_state: st.session_state.period_start = abs_min_date
+if "period_end" not in st.session_state: st.session_state.period_end = abs_max_date
 
 col1, col2 = st.sidebar.columns(2)
-with col1: anim_start_date = st.date_input("Start Date", value=min_date_val, key="period_start")
-with col2: anim_end_date = st.date_input("End Date", value=max_date_val, key="period_end")
+with col1: 
+    st.date_input("Start Date", key="period_start")
+with col2: 
+    st.date_input("End Date", key="period_end")
 
-start_str = anim_start_date.strftime("%Y%m%d")
-end_str = anim_end_date.strftime("%Y%m%d")
+# 이제 세션 상태에 저장된 값을 최종 source of truth로 사용 (위젯 리턴값 무시)
+start_str = st.session_state.period_start.strftime("%Y%m%d")
+end_str = st.session_state.period_end.strftime("%Y%m%d")
 
 # --- 세션 상태 관리 (날짜 기반으로 변경) ---
-# 초기화 시점 로깅
 if 'selected_date' not in st.session_state:
     st.session_state.selected_date = start_str
     log_feedback(f"Initial selected_date set to: {st.session_state.selected_date}")
@@ -226,13 +238,17 @@ current_config = (curve_id, start_str, end_str)
 if 'last_config' not in st.session_state:
     st.session_state.last_config = current_config
 
-# 설정 변경 감지 시
+# 설정 변경 감지 시 (안정화된 config 사용)
 if st.session_state.last_config != current_config:
-    log_feedback(f"Config Change! Old: {st.session_state.last_config}, New: {current_config}")
+    log_feedback(f"!!! Config Change Detected !!! OLD: {st.session_state.last_config} -> NEW: {current_config}")
+    
+    # 날짜 범위가 바뀌었으므로 이전 데이터와 충돌을 피하기 위해 리셋
     st.session_state.selected_date = start_str
     st.session_state.is_cached = False
     st.session_state.date_info_msg = ""
     st.session_state.last_config = current_config
+    # 설정이 바뀌면 전체를 다시 그려야 함
+    st.rerun()
 
 full_df = cached_curve_data(curve_id, start_str, end_str)
 if full_df.empty: 
@@ -278,22 +294,29 @@ def render_chart_and_controls(current_full_df):
     if st.session_state.selected_date not in dates:
         st.session_state.selected_date = dates[0]
         
-    current_date = st.session_state.selected_date
-    idx = dates.index(current_date)
+    idx = dates.index(st.session_state.selected_date)
     
-    log_feedback(f"Fragment Rerender - Config: {st.session_state.last_config}, Selected: {current_date}")
+    log_feedback(f"Fragment Rerender - Config: {st.session_state.last_config}, Selected: {st.session_state.selected_date}")
 
     c1, c2, c3, c4 = st.columns([1, 1, 1.5, 1.5])
     with c1: collapse_on = st.checkbox("Tenor Collapse", value=False)
     with c2: threshold = st.number_input("Threshold", 1, 30, 5, disabled=not collapse_on, label_visibility="collapsed")
     with c3: y_min_val = st.number_input("Y-Min (%)", value=None, format="%.2f", placeholder="Y-Min (%)", label_visibility="collapsed")
     with c4:
-        if st.button("⚡ Cache for Anim", width='stretch', type="primary" if not st.session_state.is_cached else "secondary"):
+        if st.button("⚡ Cache for Anim", use_container_width=True, type="primary" if not st.session_state.is_cached else "secondary"):
             st.session_state.is_cached = True
             st.rerun()
 
     processed_df = get_collapsed_df(current_full_df, threshold, collapse_on)
-    df_current = processed_df[processed_df['TDATE'] == current_date]
+    
+    # 💡 중요: current_date가 dates 리스트에 있는지 최종 확인
+    if st.session_state.selected_date not in dates:
+        # 데이터 리로딩 등으로 인해 현재 날짜가 유효하지 않으면 가장 가까운 날짜로 보정
+        log_feedback(f"Date {st.session_state.selected_date} not in current dates list. Resetting.")
+        st.session_state.selected_date = dates[0]
+        st.rerun()
+
+    df_current = processed_df[processed_df['TDATE'] == st.session_state.selected_date]
     y_min = y_min_val if y_min_val is not None else (global_mid_min - 0.2)
     y_max = (global_mid_max + 0.2) if y_min_val is None else (processed_df['MID'].max() + 0.2)
 
@@ -331,7 +354,7 @@ def render_chart_and_controls(current_full_df):
             )
         else:
             fig.update_layout(title_text=f"Curve: {curve_id}")
-            st.info(f"💡 '지연 렌더링' 모드 (날짜: {current_date})")
+            st.info(f"💡 '지연 렌더링' 모드 (날짜: {st.session_state.selected_date})")
 
         fig.update_layout(
             xaxis=dict(
@@ -347,7 +370,7 @@ def render_chart_and_controls(current_full_df):
             template="plotly_white", 
             hovermode='x unified'
         )
-        st.plotly_chart(fig, width='stretch', key=f"main_chart_{curve_id}_{st.session_state.is_cached}")
+        st.plotly_chart(fig, use_container_width=True, key=f"main_chart_{curve_id}_{st.session_state.is_cached}")
 
         sc1, sc2 = st.columns([8, 2])
         with sc1:
@@ -362,8 +385,9 @@ def render_chart_and_controls(current_full_df):
                     key=f"slider_{c[0]}_{c[1]}_{c[2]}"
                 )
                 if selected_val != st.session_state.selected_date:
+                    log_feedback(f"Slider moved: {st.session_state.selected_date} -> {selected_val}")
                     st.session_state.selected_date = selected_val
-                    # st.rerun() # fragment 내부에서는 위젯 변경 시 자동 리렌더링되므로 제거
+                    st.rerun()
         with sc2:
             if st.session_state.is_cached:
                 st.text_input("Go to Date", value="", placeholder="Disable in Cache Mode", key="goto_date_input_disabled", disabled=True)

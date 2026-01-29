@@ -1,0 +1,12 @@
+[13:22:06.111] Initial selected_date set to: 20160104
+[13:22:06.112] Initial selected_date set to: 20160104
+[13:22:10.471] Fragment Rerender - Config: ('KRWQ3L', '20160104', '20260123'), Selected: 20160104
+[13:22:10.472] Fragment Rerender - Config: ('KRWQ3L', '20160104', '20260123'), Selected: 20160104
+[13:22:12.143] Initial selected_date set to: 20160104
+[13:22:12.161] Fragment Rerender - Config: ('KRWQ3L', '20160104', '20260123'), Selected: 20160104
+[13:22:18.299] Fragment Rerender - Config: ('KRWQ3L', '20160104', '20260123'), Selected: 20160104
+[13:22:18.363] Slider moved: 20160104 -> 20170222
+[13:22:18.439] Fragment Rerender - Config: ('KRWQ3L', '20160104', '20260123'), Selected: 20170222
+[13:22:22.425] Fragment Rerender - Config: ('KRWQ3L', '20160104', '20260123'), Selected: 20170222
+[13:22:22.483] Slider moved: 20170222 -> 20180717
+[13:22:22.547] Fragment Rerender - Config: ('KRWQ3L', '20160104', '20260123'), Selected: 20180717

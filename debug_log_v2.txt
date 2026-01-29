@@ -1,0 +1,589 @@
+[V2][13:28:05.523] Application Initialized
+[V2][13:28:10.643] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:28:15.790] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:28:15.825] Slider moved: 20160104 -> 20171011
+[V2][13:28:15.888] Fragment Rerender: Date=20171011, Cached=False
+[V2][13:28:17.216] Fragment Rerender: Date=20171011, Cached=False
+[V2][13:28:17.251] Slider moved: 20171011 -> 20180411
+[V2][13:28:17.311] Fragment Rerender: Date=20180411, Cached=False
+[V2][13:28:18.789] Fragment Rerender: Date=20180411, Cached=False
+[V2][13:28:18.826] Slider moved: 20180411 -> 20190129
+[V2][13:28:18.896] Fragment Rerender: Date=20190129, Cached=False
+[V2][13:28:19.831] Fragment Rerender: Date=20190129, Cached=False
+[V2][13:28:19.865] Slider moved: 20190129 -> 20190515
+[V2][13:28:19.930] Fragment Rerender: Date=20190515, Cached=False
+[V2][13:28:21.642] Fragment Rerender: Date=20190515, Cached=False
+[V2][13:28:21.677] Slider moved: 20190515 -> 20191125
+[V2][13:28:21.743] Fragment Rerender: Date=20191125, Cached=False
+[V2][13:28:22.832] Fragment Rerender: Date=20191125, Cached=False
+[V2][13:28:22.865] Slider moved: 20191125 -> 20200422
+[V2][13:28:22.929] Fragment Rerender: Date=20200422, Cached=False
+[V2][13:28:24.238] Fragment Rerender: Date=20200422, Cached=False
+[V2][13:28:24.272] Slider moved: 20200422 -> 20201116
+[V2][13:28:24.335] Fragment Rerender: Date=20201116, Cached=False
+[V2][13:28:25.135] Fragment Rerender: Date=20201116, Cached=False
+[V2][13:28:25.169] Slider moved: 20201116 -> 20210308
+[V2][13:28:25.233] Fragment Rerender: Date=20210308, Cached=False
+[V2][13:28:27.772] Fragment Rerender: Date=20210308, Cached=False
+[V2][13:28:27.806] Slider moved: 20210308 -> 20220127
+[V2][13:28:27.871] Fragment Rerender: Date=20220127, Cached=False
+[V2][13:28:29.328] Application Initialized
+[V2][13:28:29.349] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:29:09.422] Period Applied: 2019-01-17 ~ 2026-01-23
+[V2][13:29:09.422] Config Change detected: ('KRWQ3L', '20160104', '20260123') -> ('KRWQ3L', '20190117', '20260123')
+[V2][13:29:12.661] Fragment Rerender: Date=20190117, Cached=False
+[V2][13:29:20.659] Fragment Rerender: Date=20190117, Cached=False
+[V2][13:29:24.685] Fragment Rerender: Date=20190117, Cached=False
+[V2][13:29:24.721] Slider moved: 20190117 -> 20170417
+[V2][13:29:24.780] Fragment Rerender: Date=20190117, Cached=False
+[V2][13:29:26.285] Fragment Rerender: Date=20190117, Cached=False
+[V2][13:42:04.157] Application Initialized
+[V2][13:42:04.160] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:42:04.175] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:42:14.053] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:42:14.088] Slider moved: 20160104 -> 20160831
+[V2][13:42:16.541] Fragment Rerender: Date=20160831, Cached=False
+[V2][13:42:17.686] Fragment Rerender: Date=20160831, Cached=False
+[V2][13:42:17.722] Slider moved: 20160831 -> 20170308
+[V2][13:42:20.038] Fragment Rerender: Date=20170308, Cached=False
+[V2][13:42:21.995] Fragment Rerender: Date=20170308, Cached=False
+[V2][13:42:22.030] Slider moved: 20170308 -> 20180430
+[V2][13:42:24.651] Fragment Rerender: Date=20180430, Cached=False
+[V2][13:42:25.858] Fragment Rerender: Date=20180430, Cached=False
+[V2][13:42:25.895] Slider moved: 20180430 -> 20201228
+[V2][13:42:27.251] Fragment Rerender: Date=20201228, Cached=False
+[V2][13:42:28.753] Fragment Rerender: Date=20201228, Cached=False
+[V2][13:42:28.787] Slider moved: 20201228 -> 20220602
+[V2][13:42:30.112] Fragment Rerender: Date=20220602, Cached=False
+[V2][13:42:31.480] Fragment Rerender: Date=20220602, Cached=False
+[V2][13:42:31.514] Slider moved: 20220602 -> 20221222
+[V2][13:42:33.539] Fragment Rerender: Date=20221222, Cached=False
+[V2][13:43:53.193] Application Initialized
+[V2][13:43:54.400] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:43:59.099] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:44:05.671] Application Initialized
+[V2][13:44:05.675] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:44:05.700] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:44:07.270] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:44:07.308] Slider moved: 20160104 -> 20171031
+[V2][13:44:09.273] Fragment Rerender: Date=20171031, Cached=False
+[V2][13:44:23.166] Application Initialized
+[V2][13:44:23.169] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:44:23.182] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:44:24.760] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:44:24.798] Slider moved: 20160104 -> 20171031
+[V2][13:44:26.778] Fragment Rerender: Date=20171031, Cached=False
+[V2][13:44:28.786] Fragment Rerender: Date=20171031, Cached=False
+[V2][13:44:28.815] Slider moved: 20171031 -> 20210623
+[V2][13:44:30.829] Fragment Rerender: Date=20210623, Cached=False
+[V2][13:44:32.853] Fragment Rerender: Date=20210623, Cached=False
+[V2][13:44:32.882] Slider moved: 20210623 -> 20250220
+[V2][13:44:34.882] Fragment Rerender: Date=20250220, Cached=False
+[V2][13:44:36.924] Fragment Rerender: Date=20250220, Cached=False
+[V2][13:44:36.956] Slider moved: 20250220 -> 20190902
+[V2][13:44:38.931] Fragment Rerender: Date=20190902, Cached=False
+[V2][13:44:40.935] Fragment Rerender: Date=20190902, Cached=False
+[V2][13:44:40.959] Slider moved: 20190902 -> 20230419
+[V2][13:44:42.981] Fragment Rerender: Date=20230419, Cached=False
+[V2][13:45:32.902] Application Initialized
+[V2][13:45:32.904] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:45:32.916] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:45:34.335] Slider Callback: 20171031
+[V2][13:45:34.338] Fragment Rerender: Date=20171031, Cached=False
+[V2][13:45:36.378] Slider Callback: 20190902
+[V2][13:45:36.381] Fragment Rerender: Date=20190902, Cached=False
+[V2][13:45:38.428] Slider Callback: 20210623
+[V2][13:45:38.436] Fragment Rerender: Date=20210623, Cached=False
+[V2][13:45:40.422] Slider Callback: 20230419
+[V2][13:45:40.429] Fragment Rerender: Date=20230419, Cached=False
+[V2][13:45:42.480] Slider Callback: 20250220
+[V2][13:45:42.487] Fragment Rerender: Date=20250220, Cached=False
+[V2][13:45:44.492] Slider Callback: 20171031
+[V2][13:45:44.496] Fragment Rerender: Date=20171031, Cached=False
+[V2][13:45:46.525] Slider Callback: 20190902
+[V2][13:45:46.535] Fragment Rerender: Date=20190902, Cached=False
+[V2][13:45:48.540] Slider Callback: 20210623
+[V2][13:45:48.543] Fragment Rerender: Date=20210623, Cached=False
+[V2][13:45:50.569] Slider Callback: 20230419
+[V2][13:45:50.573] Fragment Rerender: Date=20230419, Cached=False
+[V2][13:45:52.608] Slider Callback: 20250220
+[V2][13:45:52.611] Fragment Rerender: Date=20250220, Cached=False
+[V2][13:46:25.644] Application Initialized
+[V2][13:46:25.647] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:46:25.659] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:46:30.442] Slider Callback: 20161228
+[V2][13:46:30.451] Fragment Rerender: Date=20161228, Cached=False
+[V2][13:46:31.602] Slider Callback: 20170712
+[V2][13:46:31.607] Fragment Rerender: Date=20170712, Cached=False
+[V2][13:46:32.630] Slider Callback: 20171218
+[V2][13:46:32.641] Fragment Rerender: Date=20171218, Cached=False
+[V2][13:46:34.024] Slider Callback: 20181204
+[V2][13:46:34.033] Fragment Rerender: Date=20181204, Cached=False
+[V2][13:46:41.883] Config update: ('KRWQ3L', '20160104', '20260123') -> ('KRWQ3L', '20220120', '20260123')
+[V2][13:46:44.048] Fragment Rerender: Date=20220120, Cached=False
+[V2][13:46:47.297] Slider Callback: 20220518
+[V2][13:46:47.302] Fragment Rerender: Date=20220518, Cached=False
+[V2][13:47:48.912] Application Initialized
+[V2][13:47:49.997] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:47:53.884] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:48:00.193] Application Initialized
+[V2][13:48:00.196] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:48:00.210] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:48:01.626] Slider Callback: 20161228
+[V2][13:48:01.628] Fragment Rerender: Date=20161228, Cached=False
+[V2][13:48:03.133] Slider Callback: 20171025
+[V2][13:48:03.135] Fragment Rerender: Date=20171025, Cached=False
+[V2][13:48:04.649] Slider Callback: 20180810
+[V2][13:48:04.652] Fragment Rerender: Date=20180810, Cached=False
+[V2][13:48:06.189] Slider Callback: 20190607
+[V2][13:48:06.191] Fragment Rerender: Date=20190607, Cached=False
+[V2][13:48:07.717] Slider Callback: 20200326
+[V2][13:48:07.723] Fragment Rerender: Date=20200326, Cached=False
+[V2][13:48:09.228] Slider Callback: 20210111
+[V2][13:48:09.230] Fragment Rerender: Date=20210111, Cached=False
+[V2][13:48:10.771] Slider Callback: 20211102
+[V2][13:48:10.774] Fragment Rerender: Date=20211102, Cached=False
+[V2][13:48:12.281] Slider Callback: 20220816
+[V2][13:48:12.285] Fragment Rerender: Date=20220816, Cached=False
+[V2][13:48:13.826] Slider Callback: 20230608
+[V2][13:48:13.830] Fragment Rerender: Date=20230608, Cached=False
+[V2][13:48:15.363] Slider Callback: 20240325
+[V2][13:48:15.372] Fragment Rerender: Date=20240325, Cached=False
+[V2][13:48:22.332] Application Initialized
+[V2][13:48:22.335] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:48:22.346] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:48:28.317] Application Initialized
+[V2][13:48:28.319] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:48:28.333] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:48:32.862] Application Initialized
+[V2][13:48:32.865] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:48:32.879] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:49:21.629] Application Initialized
+[V2][13:49:21.631] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:49:21.646] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:50:19.682] Application Initialized
+[V2][13:50:19.684] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:50:19.699] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:50:49.985] Slider Callback: 20190109
+[V2][13:50:49.988] Fragment Rerender: Date=20190109, Cached=False
+[V2][13:50:52.009] Slider Callback: 20230110
+[V2][13:50:52.011] Fragment Rerender: Date=20230110, Cached=False
+[V2][13:50:54.048] Slider Callback: 20190109
+[V2][13:50:54.052] Fragment Rerender: Date=20190109, Cached=False
+[V2][13:51:41.893] Application Initialized
+[V2][13:51:41.896] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:51:41.910] Fragment Rerender: Date=20160104, Cached=False
+[V2][13:54:00.643] Application Initialized
+[V2][13:54:01.784] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:54:05.938] Fragment Render: Date=20160104, Range=20160104~20260123
+[V2][13:54:11.201] Application Initialized
+[V2][13:54:11.204] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:54:11.225] Fragment Render: Date=20160104, Range=20160104~20260123
+[V2][13:54:13.832] Slider Callback: 20160104 -> 20210111
+[V2][13:54:13.842] Fragment Render: Date=20210111, Range=20160104~20260123
+[V2][13:54:30.313] Application Initialized
+[V2][13:54:30.316] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:54:30.334] Fragment Render: Date=20160104, Range=20160104~20260123
+[V2][13:54:31.498] Application Initialized
+[V2][13:54:31.501] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:54:31.526] Fragment Render: Date=20160104, Range=20160104~20260123
+[V2][13:54:34.126] Slider Callback: 20160104 -> 20210111
+[V2][13:54:34.134] Fragment Render: Date=20210111, Range=20160104~20260123
+[V2][13:55:17.362] Application Initialized
+[V2][13:55:17.365] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:55:17.395] Fragment Render: Date=20160104, Range=20160104~20260123
+[V2][13:55:20.166] Slider Callback: 20160104 -> 20210111
+[V2][13:55:20.169] Fragment Render: Date=20210111, Range=20160104~20260123
+[V2][13:56:07.769] Application Initialized
+[V2][13:56:07.772] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:56:07.793] Fragment Render: Date=20160104, Range=20160104~20260123
+[V2][13:57:08.682] Application Initialized
+[V2][13:57:08.685] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:57:08.707] Fragment Render: Date=20160104, Range=20160104~20260123
+[V2][13:57:11.338] Slider Callback: 20160104 -> 20210111
+[V2][13:57:11.347] Fragment Render: Date=20210111, Range=20160104~20260123
+[V2][13:58:01.363] Application Initialized
+[V2][13:58:01.366] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:58:01.385] Fragment Render: Date=20160104, Range=20160104~20260123
+[V2][13:58:13.483] Application Initialized
+[V2][13:58:13.486] Curve changed to KRWQ3L. Dates reset to 2016-01-04 00:00:00 ~ 2026-01-23 00:00:00
+[V2][13:58:13.506] Fragment Render: Date=20160104, Range=20160104~20260123
+[V2][13:58:16.112] Slider Callback: 20160104 -> 20210111
+[V2][13:58:16.123] Fragment Render: Date=20210111, Range=20160104~20260123
+[V2][13:58:18.049] Config update: ('KRWQ3L', '20160104', '20260123') -> ('KRWQ3L', '20190117', '20260123')
+[V2][13:58:21.354] Fragment Render: Date=20210111, Range=20190117~20260123
+[V2][13:58:23.267] Slider Callback: 20210111 -> 20190927
+[V2][13:58:23.275] Fragment Render: Date=20190927, Range=20160104~20260123
+[V2][13:58:25.291] Fragment Render: Date=20190927, Range=20160104~20260123
+[V2][13:58:26.500] Fragment Render: Date=20190927, Range=20160104~20260123
+[V2][13:59:26.904] Application Initialized
+[V2][13:59:26.907] Curve reset: KRWQ3L, Dates: 2016-01-04~2026-01-23
+[V2][13:59:26.927] Fragment Render: Date=20160104, Range=20160104~20260123
+[V2][13:59:29.556] Fragment Render: Date=20210111, Range=20160104~20260123
+[V2][13:59:31.467] Config update: ('KRWQ3L', '20160104', '20260123') -> ('KRWQ3L', '20190117', '20260123')
+[V2][13:59:31.534] Fragment Render: Date=20210111, Range=20190117~20260123
+[V2][14:00:01.311] Application Initialized
+[V2][14:00:01.314] Curve reset: KRWQ3L, Dates: 2016-01-04~2026-01-23
+[V2][14:00:01.349] Fragment Render: Date=20160104, Range=20160104~20260123
+[V2][14:00:03.949] Fragment Render: Date=20210111, Range=20160104~20260123
+[V2][14:00:05.890] Config update: ('KRWQ3L', '20160104', '20260123') -> ('KRWQ3L', '20190117', '20260123')
+[V2][14:00:05.960] Fragment Render: Date=20210111, Range=20190117~20260123
+[V2][14:00:11.127] Fragment Render: Date=20210111, Range=20160104~20260123
+[V2][14:00:13.159] Fragment Render: Date=20161228, Range=20160104~20260123
+[V2][14:00:15.177] Fragment Render: Date=20170526, Range=20160104~20260123
+[V2][14:00:17.183] Fragment Render: Date=20171025, Range=20160104~20260123
+[V2][14:00:19.197] Fragment Render: Date=20180321, Range=20160104~20260123
+[V2][14:00:21.227] Fragment Render: Date=20180810, Range=20160104~20260123
+[V2][14:00:23.275] Fragment Render: Date=20190109, Range=20160104~20260123
+[V2][14:00:25.289] Fragment Render: Date=20190607, Range=20160104~20260123
+[V2][14:00:27.323] Fragment Render: Date=20191101, Range=20160104~20260123
+[V2][14:00:29.332] Fragment Render: Date=20200326, Range=20160104~20260123
+[V2][14:00:31.339] Fragment Render: Date=20200813, Range=20160104~20260123
+[V2][14:00:33.373] Fragment Render: Date=20210111, Range=20160104~20260123
+[V2][14:00:35.390] Fragment Render: Date=20210607, Range=20160104~20260123
+[V2][14:00:37.428] Fragment Render: Date=20211102, Range=20160104~20260123
+[V2][14:00:39.446] Fragment Render: Date=20220323, Range=20160104~20260123
+[V2][14:00:41.465] Fragment Render: Date=20220816, Range=20160104~20260123
+[V2][14:00:43.486] Fragment Render: Date=20230110, Range=20160104~20260123
+[V2][14:00:45.528] Fragment Render: Date=20230608, Range=20160104~20260123
+[V2][14:00:47.531] Fragment Render: Date=20231030, Range=20160104~20260123
+[V2][14:00:49.548] Fragment Render: Date=20240325, Range=20160104~20260123
+[V2][14:00:51.565] Fragment Render: Date=20240820, Range=20160104~20260123
+[V2][14:01:16.257] Application Initialized
+[V2][14:01:16.260] Curve reset: KRWQ3L, Range: 2016-01-04~2026-01-23
+[V2][14:01:16.280] Fragment Render: Date=20160104, Range=20160104~20260123
+[V2][14:01:18.898] Fragment Render: Date=20210111, Range=20160104~20260123
+[V2][14:01:20.827] Period Changed via Callback: 2019-01-17 ~ 2026-01-23
+[V2][14:01:20.835] Config update: ('KRWQ3L', '20160104', '20260123') -> ('KRWQ3L', '20190117', '20260123')
+[V2][14:01:20.900] Fragment Render: Date=20210111, Range=20190117~20260123
+[V2][14:02:50.725] Application Initialized
+[V2][14:02:50.728] Curve reset: KRWQ3L, Range: 2016-01-04~2026-01-23
+[V2][14:02:50.747] Fragment Render: Date=20160104
+[V2][14:02:53.343] Slider Callback: 20160104 -> 20210111
+[V2][14:02:53.348] Fragment Render: Date=20210111
+[V2][14:02:55.237] Period Changed via Callback: 2019-01-17 ~ 2026-01-23
+[V2][14:02:55.244] Config update: ('KRWQ3L', '20160104', '20260123') -> ('KRWQ3L', '20190117', '20260123')
+[V2][14:02:55.313] Fragment Render: Date=20210111
+[V2][14:04:43.889] Application Initialized
+[V2][14:04:43.891] Curve reset: KRWQ3L, Range: 2016-01-04~2026-01-23
+[V2][14:04:43.905] Fragment Render: Date=20160104
+[V2][14:04:46.338] Slider Callback: 20160104 -> 20210111
+[V2][14:04:46.346] Fragment Render: Date=20210111
+[V2][14:04:48.232] Period Changed via Callback: 2019-01-17 ~ 2026-01-23
+[V2][14:04:48.238] Config update: ('KRWQ3L', '20160104', '20260123') -> ('KRWQ3L', '20190117', '20260123')
+[V2][14:04:48.274] Fragment Render: Date=20210111
+[V2][14:06:17.192] Application Initialized
+[V2][14:06:17.194] Curve reset: KRWQ3L, Range: 2016-01-04~2026-01-23
+[V2][14:06:17.217] Fragment Render: 20160104
+[V2][14:06:19.814] Slider Sync: 20210111
+[V2][14:06:19.819] Fragment Render: 20210111
+[V2][14:06:21.744] Period Changed via Callback: 2019-01-17 ~ 2026-01-23
+[V2][14:06:21.752] Config update: ('KRWQ3L', '20160104', '20260123') -> ('KRWQ3L', '20190117', '20260123')
+[V2][14:06:21.821] Fragment Render: 20210111
+[V2][14:06:26.998] Slider Sync: 20190927
+[V2][14:06:27.004] Fragment Render: 20190927
+[V2][14:06:29.015] Fragment Render: 20190927
+[V2][14:06:31.034] Fragment Render: 20190927
+[V2][14:06:33.068] Fragment Render: 20190927
+[V2][14:06:35.070] Fragment Render: 20190927
+[V2][14:06:37.115] Fragment Render: 20190927
+[V2][14:06:39.132] Fragment Render: 20190927
+[V2][14:06:41.165] Fragment Render: 20190927
+[V2][14:06:43.194] Fragment Render: 20190927
+[V2][14:06:45.204] Fragment Render: 20190927
+[V2][14:06:47.221] Fragment Render: 20190927
+[V2][14:06:49.233] Fragment Render: 20190927
+[V2][14:06:51.243] Fragment Render: 20190927
+[V2][14:06:53.253] Fragment Render: 20190927
+[V2][14:06:55.279] Fragment Render: 20190927
+[V2][14:06:57.288] Fragment Render: 20190927
+[V2][14:06:59.298] Fragment Render: 20190927
+[V2][14:07:01.345] Fragment Render: 20190927
+[V2][14:07:03.372] Fragment Render: 20190927
+[V2][14:07:05.407] Fragment Render: 20190927
+[V2][14:07:07.448] Fragment Render: 20190927
+[V2][14:07:58.572] Application Initialized
+[V2][14:07:59.418] Curve Reset: ARSUSD
+[V2][14:08:00.269] Fragment Render: 20160101 (Range: 20160101~20260123)
+[V2][14:08:01.277] Slider Sync: 20210108
+[V2][14:08:01.279] Fragment Render: 20210108 (Range: 20160101~20260123)
+[V2][14:08:03.176] Period Changed: 2019-01-17 ~ 2026-01-23
+[V2][14:08:03.904] Fragment Render: 20210108 (Range: 20190117~20260123)
+[V2][14:08:08.408] Slider Sync: 20190926
+[V2][14:08:08.409] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:10.436] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:12.461] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:14.471] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:16.496] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:18.506] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:20.519] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:22.536] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:24.546] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:26.573] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:28.585] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:30.598] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:32.609] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:34.634] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:36.647] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:38.658] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:40.684] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:42.695] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:44.705] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:46.717] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:08:48.729] Fragment Render: 20190926 (Range: 20160101~20260123)
+[V2][14:09:26.842] Application Initialized
+[V2][14:09:26.846] Curve Reset: ARSUSD
+[V2][14:09:26.850] Fragment Render: 20160101 (Range: 20160101~20260123)
+[V2][14:09:31.457] Fragment Render: 20160101 (Range: 20160101~20260123)
+[V2][14:09:31.539] Fragment Render: 20210108 (Range: 20160101~20260123)
+[V2][14:09:34.370] Period Changed: 2019-01-17 ~ 2026-01-23
+[V2][14:09:34.379] Fragment Render: 20210108 (Range: 20190117~20260123)
+[V2][14:09:39.602] Fragment Render: 20210108 (Range: 20160101~20260123)
+[V2][14:09:41.632] Fragment Render: 20210108 (Range: 20160101~20260123)
+[V2][14:09:41.713] Fragment Render: 20190117 (Range: 20190117~20260123)
+[V2][14:09:43.634] Fragment Render: 20190117 (Range: 20160101~20260123)
+[V2][14:09:45.667] Fragment Render: 20190117 (Range: 20160101~20260123)
+[V2][14:09:45.747] Fragment Render: 20190117 (Range: 20190117~20260123)
+[V2][14:09:47.693] Fragment Render: 20190117 (Range: 20160101~20260123)
+[V2][14:09:49.727] Fragment Render: 20190117 (Range: 20160101~20260123)
+[V2][14:09:49.806] Fragment Render: 20190117 (Range: 20190117~20260123)
+[V2][14:09:51.761] Fragment Render: 20190117 (Range: 20160101~20260123)
+[V2][14:09:53.793] Fragment Render: 20190117 (Range: 20160101~20260123)
+[V2][14:09:53.867] Fragment Render: 20190531 (Range: 20190117~20260123)
+[V2][14:09:55.811] Fragment Render: 20190531 (Range: 20160101~20260123)
+[V2][14:09:57.827] Fragment Render: 20190531 (Range: 20160101~20260123)
+[V2][14:09:57.912] Fragment Render: 20200324 (Range: 20190117~20260123)
+[V2][14:09:59.857] Fragment Render: 20200324 (Range: 20160101~20260123)
+[V2][14:10:01.864] Fragment Render: 20200324 (Range: 20160101~20260123)
+[V2][14:10:01.943] Fragment Render: 20210108 (Range: 20190117~20260123)
+[V2][14:10:03.885] Fragment Render: 20210108 (Range: 20160101~20260123)
+[V2][14:10:05.904] Fragment Render: 20210108 (Range: 20160101~20260123)
+[V2][14:10:05.979] Fragment Render: 20211102 (Range: 20190117~20260123)
+[V2][14:10:07.903] Fragment Render: 20211102 (Range: 20160101~20260123)
+[V2][14:10:09.924] Fragment Render: 20211102 (Range: 20160101~20260123)
+[V2][14:10:10.017] Fragment Render: 20220819 (Range: 20190117~20260123)
+[V2][14:10:11.950] Fragment Render: 20220819 (Range: 20160101~20260123)
+[V2][14:10:13.961] Fragment Render: 20220819 (Range: 20160101~20260123)
+[V2][14:10:14.037] Fragment Render: 20230613 (Range: 20190117~20260123)
+[V2][14:10:16.006] Fragment Render: 20230613 (Range: 20160101~20260123)
+[V2][14:10:18.027] Fragment Render: 20230613 (Range: 20160101~20260123)
+[V2][14:10:18.110] Fragment Render: 20240328 (Range: 20190117~20260123)
+[V2][14:10:20.016] Fragment Render: 20240328 (Range: 20160101~20260123)
+[V2][14:10:57.598] Application Initialized
+[V2][14:10:57.601] Curve Reset: ARSUSD
+[V2][14:10:57.606] Fragment Render: 20160101 (Range: 20160101~20260123)
+[V2][14:11:02.219] Fragment Render: 20160101 (Range: 20160101~20260123)
+[V2][14:11:02.295] Fragment Render: 20210108 (Range: 20160101~20260123)
+[V2][14:11:05.133] Period Changed: 2019-01-17 ~ 2026-01-23
+[V2][14:11:05.142] Fragment Render: 20210108 (Range: 20190117~20260123)
+[V2][14:11:10.349] Fragment Render: 20210108 (Range: 20160101~20260123)
+[V2][14:11:12.381] Fragment Render: 20210108 (Range: 20160101~20260123)
+[V2][14:11:12.459] Fragment Render: 20190117 (Range: 20190117~20260123)
+[V2][14:11:15.431] Fragment Render: 20190117 (Range: 20160101~20260123)
+[V2][14:11:18.449] Fragment Render: 20190117 (Range: 20160101~20260123)
+[V2][14:11:18.526] Fragment Render: 20190117 (Range: 20190117~20260123)
+[V2][14:11:21.489] Fragment Render: 20190117 (Range: 20160101~20260123)
+[V2][14:11:24.480] Fragment Render: 20190117 (Range: 20160101~20260123)
+[V2][14:11:24.556] Fragment Render: 20190117 (Range: 20190117~20260123)
+[V2][14:11:27.505] Fragment Render: 20190117 (Range: 20160101~20260123)
+[V2][14:11:30.530] Fragment Render: 20190117 (Range: 20160101~20260123)
+[V2][14:11:30.605] Fragment Render: 20200107 (Range: 20190117~20260123)
+[V2][14:11:33.545] Fragment Render: 20200107 (Range: 20160101~20260123)
+[V2][14:11:36.562] Fragment Render: 20200107 (Range: 20160101~20260123)
+[V2][14:11:36.636] Fragment Render: 20210108 (Range: 20190117~20260123)
+[V2][14:11:39.588] Fragment Render: 20210108 (Range: 20160101~20260123)
+[V2][14:12:12.997] Application Initialized
+[V2][14:12:13.001] Curve Reset: ARSUSD
+[V2][14:12:13.006] Fragment Render: 20160101
+[V2][14:12:17.567] Fragment Render: 20160101
+[V2][14:12:17.647] Fragment Render: 20210108
+[V2][14:12:20.466] Period Changed: 2019-01-17 ~ 2026-01-23
+[V2][14:12:20.477] Fragment Render: 20210108
+[V2][14:12:20.563] Fragment Render: 20190117
+[V2][14:12:25.692] Fragment Render: 20190117
+[V2][14:12:25.776] Fragment Render: 20190117
+[V2][14:12:27.697] Fragment Render: 20190117
+[V2][14:12:27.774] Fragment Render: 20190117
+[V2][14:12:30.716] Fragment Render: 20190117
+[V2][14:12:30.794] Fragment Render: 20190117
+[V2][14:12:33.736] Fragment Render: 20190117
+[V2][14:12:33.817] Fragment Render: 20190117
+[V2][14:12:36.774] Fragment Render: 20190117
+[V2][14:12:36.851] Fragment Render: 20190117
+[V2][14:12:39.789] Fragment Render: 20190117
+[V2][14:12:39.870] Fragment Render: 20190117
+[V2][14:12:42.803] Fragment Render: 20190117
+[V2][14:12:42.889] Fragment Render: 20190117
+[V2][14:12:45.848] Fragment Render: 20190117
+[V2][14:12:45.926] Fragment Render: 20190117
+[V2][14:12:48.865] Fragment Render: 20190117
+[V2][14:12:48.944] Fragment Render: 20190117
+[V2][14:12:51.882] Fragment Render: 20190117
+[V2][14:12:51.961] Fragment Render: 20190117
+[V2][14:12:54.893] Fragment Render: 20190117
+[V2][14:12:54.967] Fragment Render: 20190117
+[V2][14:13:30.008] Application Initialized
+[V2][14:13:30.011] Curve Reset: ARSUSD
+[V2][14:13:30.019] Fragment Render: 20160101
+[V2][14:13:34.635] Fragment Render: 20210108
+[V2][14:13:37.561] Period Changed: 2019-01-17 ~ 2026-01-23
+[V2][14:13:37.575] Fragment Render: 20190117
+[V2][14:13:42.834] Fragment Render: 20160101
+[V2][14:13:44.856] Fragment Render: 20161229
+[V2][14:13:47.866] Fragment Render: 20250120
+[V2][14:13:50.880] Fragment Render: 20180101
+[V2][14:13:53.909] Fragment Render: 20240117
+[V2][14:13:56.924] Fragment Render: 20190103
+[V2][14:13:59.958] Fragment Render: 20230116
+[V2][14:14:02.992] Fragment Render: 20200107
+[V2][14:14:06.015] Fragment Render: 20220112
+[V2][14:14:09.032] Fragment Render: 20210108
+[V2][14:14:12.042] Fragment Render: 20161229
+[V2][14:14:31.256] Application Initialized
+[V2][14:14:31.259] Curve Reset: ARSUSD
+[V2][14:15:31.037] Curve reset: ARSUSD
+[V2][14:15:31.042] Render: 20160101
+[V2][14:15:33.764] Curve reset: ARSUSD
+[V2][14:15:33.769] Render: 20160101
+[V2][14:15:38.345] Render: 20160101
+[V2][14:15:38.424] Render: 20210108
+[V2][14:15:41.267] Render: 20210108
+[V2][14:15:46.123] Render: 20160101
+[V2][14:15:46.211] Render: 20180627
+[V2][14:15:46.477] Render: 20210108
+[V2][14:15:48.492] Render: 20210108
+[V2][14:15:48.572] Render: 20190117
+[V2][14:15:49.530] Render: 20180627
+[V2][14:15:49.607] Render: 20200207
+[V2][14:15:51.413] Render: 20200207
+[V2][14:15:51.487] Render: 20200918
+[V2][14:15:51.554] Render: 20190117
+[V2][14:15:54.534] Render: 20190117
+[V2][14:15:54.611] Render: 20190117
+[V2][14:15:55.897] Render: 20200918
+[V2][14:15:57.566] Render: 20190117
+[V2][14:16:00.590] Render: 20190117
+[V2][14:16:00.665] Render: 20190117
+[V2][14:16:03.620] Render: 20190117
+[V2][14:16:05.719] Curve reset: KRWQ3L
+[V2][14:16:05.737] Render: 20160104
+[V2][14:16:06.662] Render: 20190117
+[V2][14:16:06.745] Render: 20200107
+[V2][14:16:08.444] Render: 20160104
+[V2][14:16:09.417] Render: 20160104
+[V2][14:16:09.505] Render: 20170216
+[V2][14:16:09.666] Render: 20200107
+[V2][14:16:11.137] Render: 20170216
+[V2][14:16:12.158] Render: 20170216
+[V2][14:16:12.243] Render: 20170828
+[V2][14:16:12.689] Render: 20200107
+[V2][14:16:12.765] Render: 20210108
+[V2][14:16:13.372] Render: 20170828
+[V2][14:16:15.722] Render: 20210108
+[V2][14:16:19.295] Render: 20170828
+[V2][14:16:19.385] Render: 20181224
+[V2][14:16:20.985] Render: 20181224
+[V2][14:16:33.513] Curve reset: ARSUSD
+[V2][14:16:33.517] Render: 20160101
+[V2][14:16:37.977] Render: 20160101
+[V2][14:16:38.038] Render: 20210108
+[V2][14:16:40.894] Render: 20210108
+[V2][14:16:46.134] Render: 20210108
+[V2][14:16:48.193] Render: 20210108
+[V2][14:16:48.258] Render: 20190117
+[V2][14:16:51.212] Render: 20190117
+[V2][14:16:54.260] Render: 20190117
+[V2][14:16:54.334] Render: 20190117
+[V2][14:16:57.307] Render: 20190117
+[V2][14:17:00.345] Render: 20190117
+[V2][14:17:00.419] Render: 20190117
+[V2][14:17:03.401] Render: 20190117
+[V2][14:17:06.444] Render: 20190117
+[V2][14:17:06.520] Render: 20200107
+[V2][14:17:09.506] Render: 20200107
+[V2][14:17:12.580] Render: 20200107
+[V2][14:17:12.657] Render: 20210108
+[V2][14:17:15.633] Render: 20210108
+[V2][14:17:34.182] Curve reset: ARSUSD
+[V2][14:17:34.186] Render: 20160101
+[V2][14:17:38.794] Render: 20160101
+[V2][14:17:38.875] Render: 20210108
+[V2][14:17:41.692] Render: 20210108
+[V2][14:17:46.921] Render: 20210108
+[V2][14:17:48.968] Render: 20210108
+[V2][14:17:49.047] Render: 20190117
+[V2][14:17:52.029] Render: 20190117
+[V2][14:17:55.056] Render: 20190117
+[V2][14:17:55.136] Render: 20190117
+[V2][14:17:58.080] Render: 20190117
+[V2][14:18:01.156] Render: 20190117
+[V2][14:18:01.236] Render: 20190117
+[V2][14:18:04.199] Render: 20190117
+[V2][14:18:07.275] Render: 20190117
+[V2][14:18:07.351] Render: 20200107
+[V2][14:18:10.333] Render: 20200107
+[V2][14:18:13.389] Render: 20200107
+[V2][14:18:13.474] Render: 20210108
+[V2][14:18:16.462] Render: 20210108
+[V2][14:34:12.338] Curve reset: ARSUSD
+[V2][14:34:12.341] Render: 20160101
+[V2][14:34:21.337] Render: 20160101
+[V2][14:34:27.268] Curve reset: KRWQ3L
+[V2][14:34:27.288] Render: 20160104
+[V2][14:34:32.287] Render: 20160104
+[V2][14:36:51.558] Curve reset: ARSUSD
+[V2][14:36:51.561] Render [ARSUSD]: 20160101
+[V2][14:36:56.011] Render [ARSUSD]: 20160101
+[V2][14:36:56.069] Render [ARSUSD]: 20210108
+[V2][14:36:58.929] Render [ARSUSD]: 20210108
+[V2][14:37:04.143] Render [ARSUSD]: 20210108
+[V2][14:37:06.174] Render [ARSUSD]: 20210108
+[V2][14:37:06.239] Render [ARSUSD]: 20190117
+[V2][14:37:09.194] Render [ARSUSD]: 20190117
+[V2][14:37:12.233] Render [ARSUSD]: 20190117
+[V2][14:37:12.289] Render [ARSUSD]: 20190117
+[V2][14:37:15.272] Render [ARSUSD]: 20190117
+[V2][14:37:18.314] Render [ARSUSD]: 20190117
+[V2][14:37:18.378] Render [ARSUSD]: 20190117
+[V2][14:37:21.348] Render [ARSUSD]: 20190117
+[V2][14:37:24.410] Render [ARSUSD]: 20190117
+[V2][14:37:24.472] Render [ARSUSD]: 20200107
+[V2][14:37:27.476] Render [ARSUSD]: 20200107
+[V2][14:37:30.509] Render [ARSUSD]: 20200107
+[V2][14:37:30.568] Render [ARSUSD]: 20210108
+[V2][14:37:33.540] Render [ARSUSD]: 20210108
+[V2][14:40:10.603] Curve reset: ARSUSD
+[V2][14:40:10.607] Render [ARSUSD]: 20160101
+[V2][14:40:21.900] Render [ARSUSD]: 20160101
+[V2][14:40:26.097] Render [ARSUSD]: 20160101
+[V2][14:40:31.961] Curve reset: KRWQ3L
+[V2][14:40:31.981] Render [KRWQ3L]: 20160104
+[V2][14:40:39.721] Render [ARSUSD]: 20160104
+[V2][14:40:41.217] Render [ARSUSD]: 20160104
+[V2][14:40:41.306] Render [KRWQ3L]: 20161215
+[V2][14:40:43.065] Render [ARSUSD]: 20161215
+[V2][14:40:44.103] Render [ARSUSD]: 20161215
+[V2][14:40:44.197] Render [KRWQ3L]: 20180319
+[V2][14:40:46.465] Render [ARSUSD]: 20180319
+[V2][14:40:47.649] Render [ARSUSD]: 20180319
+[V2][14:40:47.740] Render [KRWQ3L]: 20190924
+[V2][15:05:26.035] Render [ARSUSD]: 20190924
+[V2][15:05:28.101] !!! Curve Changed to ARSUSD -> State Reset & Rerun !!!
+[V2][15:05:28.151] Fragment Run: ARSUSD | 20160101 | Cached=False
+[V2][15:05:31.544] Slider Sync: 20170417
+[V2][15:05:31.548] Fragment Run: ARSUSD | 20170417 | Cached=False
+[V2][15:05:34.616] Slider Sync: 20180122
+[V2][15:05:34.623] Fragment Run: ARSUSD | 20180122 | Cached=False
+[V2][15:05:36.739] Slider Sync: 20190131
+[V2][15:05:36.743] Fragment Run: ARSUSD | 20190131 | Cached=False
+[V2][15:05:37.712] Slider Sync: 20190118
+[V2][15:05:37.718] Fragment Run: ARSUSD | 20190118 | Cached=False
+[V2][15:05:38.032] Slider Sync: 20181101
+[V2][15:05:38.035] Fragment Run: ARSUSD | 20181101 | Cached=False
+[V2][15:05:38.821] Slider Sync: 20190301
+[V2][15:05:38.832] Fragment Run: ARSUSD | 20190301 | Cached=False
+[V2][15:05:40.507] Slider Sync: 20200309
+[V2][15:05:40.518] Fragment Run: ARSUSD | 20200309 | Cached=False
+[V2][15:05:51.075] !!! Curve Changed to KRWQ3L -> State Reset & Rerun !!!
+[V2][15:05:55.903] Fragment Run: KRWQ3L | 20160104 | Cached=False
+[V2][15:05:58.746] Slider Sync: 20170801
