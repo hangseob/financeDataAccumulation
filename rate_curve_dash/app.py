@@ -293,4 +293,4 @@ def sync_state_on_manual_slider(slider_value, is_disabled):
     return dash.no_update
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8050)
+    app.run(debug=True, port=8050, use_reloader=False)
