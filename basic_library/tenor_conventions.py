@@ -7,18 +7,19 @@ def tenor_name_to_year_fraction(tenor_name: str) -> float:
     - 1W = 7/360
     - 1M = 30/360 = 1/12
     - 1Y = 360/360 = 1
+    - ON, TN, SN = 1/360
     """
     if not tenor_name:
         return 0.0
     
-    tenor_name = tenor_name.upper().strip()
+    tenor_name = str(tenor_name).upper().strip()
     
     # 1. 특수 테너 처리 (일 단위로 취급)
     special_tenors = {
-        'ON': 1/360,  # Overnight
-        'TN': 1/360,  # Tomorrow Next
-        'SN': 1/360,  # Spot Next
-        'N': 0.0      # Spot/Unknown (필요 시 0 또는 특정값 설정)
+        'ON': 1/360, 'O/N': 1/360,
+        'TN': 1/360, 'T/N': 1/360,
+        'SN': 1/360, 'S/N': 1/360,
+        'N': 0.0      # Spot/Unknown
     }
     
     if tenor_name in special_tenors:
@@ -32,12 +33,12 @@ def tenor_name_to_year_fraction(tenor_name: str) -> float:
     value = float(match.group(1))
     unit = match.group(2)
     
-    # 3. 단위별 계산
+    # 3. 단위별 계산 (30/360 기준)
     if unit == 'D':      # Day
         return value / 360.0
     elif unit == 'W':    # Week
         return (value * 7.0) / 360.0
-    elif unit == 'M':    # Month (30/360에 의해 1개월은 항상 1/12)
+    elif unit == 'M':    # Month
         return value / 12.0
     elif unit == 'Y':    # Year
         return value
